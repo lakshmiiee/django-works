@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+    <script src="{% static 'script.js' %}"></script>
+    <style>
+                body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            
+            
+        }
+
+        p {
+            font-size: 16px;
+            
+        }
+
+    
+          
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+   <h1>Employee Page</h1> 
+
+   <br><br><hr>
+
+   <h1>Looping through the name of employees</h1>
+
+    {% for employees in employee %}
+    <p>{{employees.name}}</p>
+    {% endfor %}
+    <hr>
+
+    <h1>Employee name,job and salary</h1>
+
+    {% for employee in employee%}
+    <p>
+    <b>{{employee.name}}</b> 
+    <b>{{employee.job}}</b>
+    <b>{{employee.salary}}</b>
+    </p>
+    {% endfor %}<hr>
+
+    <h1>Employee status</h1>
+
+    {% for employee in employee %}
+
+        {% if employee.status == "yes" %}
+            <p style="color:green">FULL TIME</p>
+        {% else %}
+            <p style="color:red">PART TIME</p>
+        {% endif %}
+
+    {% endfor %}<hr>
+
+    
+
+        {% if employee %}
+            <p style="color:green">There are  employees</p>
+        {% else %}
+            <p>There ae no employees</p>
+        {% endif %}
+
+    
+
+    
+
+</body>
+</html>

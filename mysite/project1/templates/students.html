@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+       
+
+        .student-info {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .passed {
+            color: green;
+            font-weight: bold;
+        }
+
+        .failed {
+            color: red;
+            font-weight: bold;
+        }
+
+        .not-empty {
+            color: green;
+            font-weight: bold;
+        }
+
+        .empty {
+            color: gray;
+            font-style: italic;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Name and Grade of Students:</h1>
+    {% for student in students %}
+        <div class="student-info">
+            <b>{{ student.name }}</b>
+            <b>{{ student.grade }}</b>
+        </div>
+    {% empty %}
+        <p class="empty">No students available.</p>
+    {% endfor %}
+
+    <h1>Passed or Not</h1>
+    {% for student in students %}
+        {% if student.passed == 'yes' %}
+            <p class="passed">{{ student.name }} - Passed</p>
+        {% else %}
+            <p class="failed">{{ student.name }} - Failed</p>
+        {% endif %}
+    {% empty %}
+        <p class="empty">No results to display.</p>
+    {% endfor %}
+
+    <h1>Is List Empty</h1>
+    {% if students %}
+        <p class="not-empty">The list is not empty</p>
+    {% else %}
+        <p class="empty">The list is empty</p>
+    {% endif %}
+
+</body>
+</html>

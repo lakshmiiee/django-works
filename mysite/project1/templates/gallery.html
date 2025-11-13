@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    
+</head>
+<body>
+    <h1>MY IMAGE GALLERY</h1>
+    <header>
+    <a href="">Home</a>
+    <a href="contact.html">Contact</a>
+    </header>
+    <br><br>
+
+    <img src="{% static 'img1.jpeg' %}" alt="Image 1" style="width:500px;height:200px">
+    <figcaption>Nature image 1</figcaption>
+    <img src="{% static 'img2.jpeg' %}" alt="Image 2" style="width:500px;height:200px">
+    <figcaption>Nature image 2</figcaption>
+    <img src="{% static 'img3.jpeg' %}" alt="Image 3" style="width:500px;height:200px">
+    <figcaption>Nature image 3</figcaption>
+
+    
+
+</body>
+</html>
