@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formdata</title>
+</head>
+<body>
+    <h2>Hello {{username}}  Thankyou and Have a good day</h2>
+
+    <table>
+        {% for x,y in formdata.items %}
+        <tr>
+            <td>{{ x }}</td>
+            <td>:</td>
+            <td>{{ y }}</td>
+        </tr>
+        {% endfor %}
+</body>
+</html>

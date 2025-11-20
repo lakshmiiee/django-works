@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post formdata</title>
+</head>
+<body>
+    <h2> Hello {{ name }}, your favorite color is {{ color }}!  
+
+    <table>
+        {% for x,y in formdatapost.items %}
+        <tr>
+            <td>{{ x }}
+            <td>:</td>
+            <td>{{ y }}</td>
+        <tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

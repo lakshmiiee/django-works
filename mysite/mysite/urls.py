@@ -20,11 +20,16 @@ from project1 import views
 
 urlpatterns = [
     path("",views.greeting),
-    path("aboutus.html", views.aboutus),
-    path("gallery.html", views.gallery),
-    path("contact.html",views.contact),
-    path("employee.html",views.employee),
-    path('students.html',views.students),
-
+    path("aboutus", views.aboutus),
+    path("gallery", views.gallery),
+    path("contact",views.contact),
+    path("employee",views.employee),
+    path('students',views.students),
+    path('form',views.form),
+    path('formdata',views.form),
+    path('formpost',views.formpost),
+    path('formdatapost',views.formpost),
+    path('login',views.login),
+    path('registration',views.reg),
 
 ]
