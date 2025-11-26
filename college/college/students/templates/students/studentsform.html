@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+
+{% block extra %}
+    <h1>Student Form</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit" style="background: #1bb0d2ff; 
+              border: 1px solid black; 
+              text-decoration: none; 
+              border-radius: 5px; 
+              padding: 8px 12px; 
+              color: black;
+              color: white;">
+    
+
+        <br> <p>
+    <a href="{% url 'studentslist' %}" 
+       style="background: #0e5261ff; 
+              border: 1px solid black; 
+              text-decoration: none; 
+              border-radius: 5px; 
+              padding: 8px 12px; 
+              color: black;
+              color: white;">
+        View Students
+    </a>
+</p>
+{% endblock %}

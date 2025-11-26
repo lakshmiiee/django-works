@@ -1,0 +1,21 @@
+{% extends "home.html" %}
+
+{% block extra %}
+    <h2>Teachers Dashboard</h2>
+    
+        <div style="margin-top: 40px;">
+        <a href="{% url 'teachlist' %}"
+           style="display: inline-block; padding: 12px 20px; background: #0e5261ff; color: white; 
+                  text-decoration: none; border-radius: 5px; margin: 10px;">
+            Teachers List
+        </a>
+
+        <a href="{% url 'teachform' %}" 
+           style="display: inline-block; padding: 12px 20px; background: #0e5261ff; color: white; 
+                  text-decoration: none; border-radius: 5px; margin: 10px;">
+            Teachers Form
+        </a>
+    </div>
+
+    
+{% endblock %}

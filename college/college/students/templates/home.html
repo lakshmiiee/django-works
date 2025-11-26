@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding-top: 80px;">
+
+    <h1>Welcome</h1>
+    <p>Select an option below:</p>
+
+    <div style="margin-top: 40px;">
+        <a href="{% url 'studhome' %}" 
+           style="display: inline-block; padding: 12px 20px; background: #4CAF50; color: white; 
+                  text-decoration: none; border-radius: 5px; margin: 10px;">
+            Students App
+        </a>
+
+        <a href="{% url 'teachome' %}"
+           style="display: inline-block; padding: 12px 20px; background: #2196F3; color: white; 
+                  text-decoration: none; border-radius: 5px; margin: 10px;">
+            Teachers App
+        </a>
+    </div>
+
+    {% block extra %}
+    {% endblock %}
+
+
+</body>
+</html>

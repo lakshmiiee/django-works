@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Books</title>
+</head>
+<body>
+
+<p>{{ message }}</p>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author Name</th>
+    </tr>
+
+    {% for book in books %}
+    <tr>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author_name }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

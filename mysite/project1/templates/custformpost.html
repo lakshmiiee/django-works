@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Customers</title>
+</head>
+<body>
+
+<p>{{ message }}</p>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email </th>
+    </tr>
+    {% for customers in customer %}
+    <tr>
+        <td>{{ customers.id }}</td>
+        <td>{{ customers.name }}</td>
+        <td>{{ customers.email }}</td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+<a href="custfiltered">custfiltered</a>
+
+</body>
+</html>

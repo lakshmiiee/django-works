@@ -31,5 +31,9 @@ urlpatterns = [
     path('formdatapost',views.formpost),
     path('login',views.login),
     path('registration',views.reg),
+    path('modelform',views.modelform),
+    path('modelpostform',views.modelform),
+    path('cust',views.cust),
+    path('custfiltered',views.custfiltered),
 
 ]
