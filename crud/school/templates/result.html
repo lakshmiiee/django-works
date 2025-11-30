@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ student.name }} Result</title>
+</head>
+<body>
+
+<h2>Result for {{ student.name }}</h2>
+
+<p><strong>Age:</strong> {{ student.age }}</p>
+<p><strong>Class:</strong> {{ student.grade }}</p>
+
+
+<a href="{% url 'home' %}">Back to Home</a>
+
+</body>
+</html>

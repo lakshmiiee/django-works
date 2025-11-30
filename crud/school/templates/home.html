@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <style>
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left, .right {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .left {
+            background: #edf7ff;
+            border-right: 2px solid #ccc;
+        }
+
+        .student-box {
+            padding: 10px;
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .right {
+            background: #f7f7f7;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #27ae60;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE (Student List) -->
+    <div class="left">
+        <h2>Students List</h2>
+
+        {% for s in students %}
+        <div class="student-box">
+            <span>{{ s.name }}</span>
+
+            <a href="{% url 'result' s.name %}">
+                <button>View Result</button>
+            </a>
+
+        </div>
+        {% empty %}
+        <p>No students found.</p>
+        {% endfor %}
+    </div>
+
+    <!-- RIGHT SIDE (Add Student Form) -->
+    <div class="right">
+        <h2>Add New Student</h2>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Student</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
